@@ -17,4 +17,4 @@ SELECT * FROM dqlabregex WHERE REGEXP_LIKE(staf_pencatat, 'sen.?ja','i');
 SELECT * FROM dqlabregex WHERE REGEXP_LIKE(jumlah_member, '^[0-9]', 'i');
 
 # Correct the misspelling of the name "Sendja" to "Senja"
-SELECT REGEXP_REPLACE(staf_pencatat, "Se.?ja", "Senja") AS pencatat FROM dqlabregex;
+SELECT REGEXP_REPLACE(staf_pencatat, 'Se.?ja', 'Senja') AS pencatat FROM dqlabregex;
