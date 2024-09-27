@@ -19,4 +19,5 @@ common syntax of REGEXP_LIKE:
 `SELECT * FROM table_name WHERE REGEXP_LIKE(column_name, match_paramaters);`
 
 common syntax of REGEXP_REPLACE:
+
 `SELECT REGEXP_REPLACE(column_name, 'the string want to replace', 'criterian') FROM table_name;`
