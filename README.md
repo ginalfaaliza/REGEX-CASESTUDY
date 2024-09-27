@@ -12,6 +12,7 @@ common syntax of REGEXP:
 common syntax of REGEXP_LIKE:
 
 `SELECT * FROM table_name WHERE REGEXP_LIKE(column_name, match_paramaters);`
+
 **Scope:**
 1. Pattern matching: Develop and test different REGEX patterns to identify complex data structures
 2. Text Processing: Use REGEX to perform operations such as data extraction, text replacement, and data validation
