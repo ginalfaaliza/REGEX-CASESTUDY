@@ -18,3 +18,7 @@ SELECT * FROM dqlabregex WHERE REGEXP_LIKE(jumlah_member, '^[0-9]', 'i');
 
 # Correct the misspelling of the name "Sendja" to "Senja"
 SELECT REGEXP_REPLACE(staf_pencatat, 'Sen.?ja', 'Senja') AS pencatat FROM dqlabregex;
+
+# Remove non numeric format in "jumlah_member" column
+SELECT no_pencatatan, tanggal_catat, kota, REGEXP_REPLACE(jumlah_member, '[^0-9]', '') AS jumlah_member, staf_pencatatat
+FROM dqlabregex;
