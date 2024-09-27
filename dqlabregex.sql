@@ -22,3 +22,9 @@ SELECT REGEXP_REPLACE(staf_pencatat, 'Sen.?ja', 'Senja') AS pencatat FROM dqlabr
 # Remove non numeric format in "jumlah_member" column
 SELECT no_pencatatan, tanggal_catat, kota, REGEXP_REPLACE(jumlah_member, '[^0-9]', '') AS jumlah_member, staf_pencatatat
 FROM dqlabregex;
+
+# Standardize the date format to 'MM/DD/YYYY'
+SELECT tanggal_catat, REGEXP_REPLACE(
+  tanggal_catat, 
+  '([0-9]{2})-([0-9]{2})-([0-9]{4})', '$2/$1/$3') AS tanggal_pencatatan 
+FROM dqlabregex
