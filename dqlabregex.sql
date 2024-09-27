@@ -10,3 +10,6 @@ SELECT * FROM dqlabregex WHERE jumlah_member REGEXP '^[0-9]';
 # Provide information on the 'staf_pencatat' with the first name with "AN" by ignoring case sensitive
 SELECT * FROM dqlabregex WHERE REGEXP_LIKE(staf_pencatat, '^AN');
 
+# Find the name of 'staf_pencatat' wit the criteia "senja" or "sendja" by ignoring case sentivite
+SELECT * FROM dqlabregex WHERE REGEXP_LIKE(staf_pencatat, 'sen.?ja','i')
+
